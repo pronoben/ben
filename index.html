@@ -123,3 +123,243 @@
     gap:36px;
     flex-wrap:wrap;
     font-size:0.94rem;
+    color:var(--ink-soft);
+  }
+  .intent-bar strong{color:var(--ink);font-weight:600;}
+
+  section.article{
+    padding:76px 24px;
+    border-bottom:1px solid var(--line);
+  }
+  section.article:nth-of-type(even){
+    background:var(--cream-2);
+  }
+  .article-head{
+    max-width:960px;
+    margin:0 auto 40px;
+  }
+  .article-head .kicker{
+    font-size:0.88rem;
+    color:var(--green);
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    margin-bottom:10px;
+  }
+  .article-head h2{
+    font-size:clamp(1.6rem,3vw,2.15rem);
+    max-width:22ch;
+  }
+  .article-head p{
+    margin-top:16px;
+    color:var(--ink-soft);
+    max-width:62ch;
+    font-size:1.02rem;
+  }
+
+  .picks{
+    max-width:960px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+  }
+  @media (max-width:820px){
+    .picks{grid-template-columns:1fr;}
+    .hero-inner{grid-template-columns:1fr;}
+    .hero{padding-top:56px;}
+  }
+  .pick{
+    background:var(--card);
+    border:1px solid var(--line);
+    padding:26px 24px 24px;
+    display:flex;
+    flex-direction:column;
+  }
+  .pick .tier{
+    font-size:0.82rem;
+    color:var(--ink-soft);
+    margin-bottom:6px;
+  }
+  .pick h3{
+    font-size:1.15rem;
+    margin-bottom:10px;
+  }
+  .pick p{
+    color:var(--ink-soft);
+    font-size:0.94rem;
+    flex-grow:1;
+  }
+  .pick .cta{
+    margin-top:18px;
+    display:inline-block;
+    text-decoration:none;
+    font-size:0.92rem;
+    font-weight:600;
+    color:var(--green-deep);
+    border-bottom:1px solid var(--green-deep);
+    padding-bottom:2px;
+    width:fit-content;
+  }
+  .pick .cta:hover{color:var(--amber);border-color:var(--amber);}
+
+  .note{
+    max-width:960px;
+    margin:18px auto 0;
+    font-size:0.88rem;
+    color:var(--ink-soft);
+    border-left:2px solid var(--amber);
+    padding-left:14px;
+  }
+
+  footer{
+    padding:48px 24px 64px;
+    text-align:center;
+  }
+  footer p{
+    color:var(--ink-soft);
+    font-size:0.88rem;
+    max-width:56ch;
+    margin:0 auto;
+  }
+  footer .brand{
+    font-family:'Fraunces',serif;
+    font-size:1.05rem;
+    margin-bottom:10px;
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="logo">Bureau <span>Serein</span></div>
+  <nav>
+    <a href="#chaises">Chaises</a>
+    <a href="#supports">Supports PC</a>
+    <a href="#poignets">Repose-poignets</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>Un bureau à la maison qui ne vous fait plus mal au dos.</h1>
+      <p class="lede">Des repères simples et honnêtes pour équiper son coin télétravail sans se ruiner ni se perdre dans 200 fiches produits.</p>
+    </div>
+    <svg class="hero-illustration" viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration d'un bureau avec chaise, ordinateur et plante">
+      <rect x="30" y="190" width="300" height="10" rx="2" fill="var(--ink)" opacity="0.85"/>
+      <rect x="46" y="200" width="10" height="60" fill="var(--ink)" opacity="0.6"/>
+      <rect x="300" y="200" width="10" height="60" fill="var(--ink)" opacity="0.6"/>
+      <rect x="150" y="150" width="90" height="42" rx="3" fill="var(--card)" stroke="var(--ink)" stroke-width="3"/>
+      <rect x="158" y="158" width="74" height="26" fill="var(--green)" opacity="0.35"/>
+      <rect x="188" y="192" width="14" height="14" fill="var(--ink)" opacity="0.7"/>
+      <path d="M60 260 C60 220 70 200 95 195 C120 200 130 220 130 260 Z" fill="var(--amber)" opacity="0.85"/>
+      <rect d="M60 260" x="88" y="255" width="14" height="30" fill="var(--ink)" opacity="0.7"/>
+      <circle cx="270" cy="120" r="10" fill="var(--green)"/>
+      <path d="M270 130 L270 175" stroke="var(--green)" stroke-width="4" fill="none"/>
+      <path d="M270 140 C255 135 250 120 258 108" stroke="var(--green)" stroke-width="4" fill="none"/>
+      <path d="M270 155 C285 150 292 135 285 122" stroke="var(--green)" stroke-width="4" fill="none"/>
+      <rect x="255" y="175" width="30" height="18" rx="2" fill="var(--ink)" opacity="0.5"/>
+    </svg>
+  </div>
+</section>
+
+<div class="intent-bar">
+  <div class="wrap">
+    <span><strong>3 catégories</strong> testées sur le fond, pas sur la forme</span>
+    <span><strong>Budget → premium</strong> pour chaque besoin</span>
+    <span>Mis à jour régulièrement</span>
+  </div>
+</div>
+
+<section class="article" id="chaises">
+  <div class="article-head">
+    <div class="kicker">Comparatif</div>
+    <h2>Choisir une chaise de bureau qui tient sur la durée</h2>
+    <p>La chaise est le seul achat de cette liste qui mérite un vrai budget. Trois profils, trois niveaux d'investissement, selon le nombre d'heures que vous passez assis chaque jour.</p>
+  </div>
+  <div class="picks">
+    <div class="pick">
+      <div class="tier">Petit budget</div>
+      <h3>Chaise ergonomique d'entrée de gamme</h3>
+      <p>Cherchez un dossier réglable en hauteur et une assise à densité de mousse correcte. Suffisant pour moins de 5h/jour assis. Évitez les modèles sans réglage de profondeur d'assise.</p>
+      <a class="cta" href="https://www.amazon.fr/s?k=chaise+bureau+ergonomique&tag=benjamin054c-21" target="_blank" rel="noopener sponsored">Voir les modèles →</a>
+    </div>
+    <div class="pick">
+      <div class="tier">Milieu de gamme</div>
+      <h3>Chaise avec support lombaire réglable</h3>
+      <p>Le bon compromis pour une journée complète. Priorité au maintien lombaire ajustable et aux accoudoirs réglables en 3D plutôt qu'au nombre d'options gadget.</p>
+      <a class="cta" href="https://www.amazon.fr/s?k=chaise+bureau+ergonomique+lombaire&tag=benjamin054c-21" target="_blank" rel="noopener sponsored">Voir les modèles →</a>
+    </div>
+    <div class="pick">
+      <div class="tier">Investissement long terme</div>
+      <h3>Chaise haut de gamme type siège de bureau pro</h3>
+      <p>À envisager si vous travaillez assis plus de 7h/jour depuis plusieurs années. L'assise en filet respirant et la garantie longue durée justifient l'écart de prix.</p>
+      <a class="cta" href="https://www.amazon.fr/s?k=fauteuil+bureau+ergonomique+premium&tag=benjamin054c-21" target="_blank" rel="noopener sponsored">Voir les modèles →</a>
+    </div>
+  </div>
+  <p class="note">Les liens ci-dessus pointent vers une recherche Amazon filtrée par catégorie, avec le tag d'affiliation à personnaliser. Cela évite de recommander un modèle précis qui peut être en rupture ou changer de version.</p>
+</section>
+
+<section class="article" id="supports">
+  <div class="article-head">
+    <div class="kicker">Comparatif</div>
+    <h2>Un support pour ordinateur portable, pour arrêter de baisser la tête</h2>
+    <p>L'écran d'un ordinateur portable posé à plat oblige à regarder vers le bas toute la journée. Un support réglable en hauteur, combiné à un clavier externe, corrige presque à lui seul la posture du cou.</p>
+  </div>
+  <div class="picks">
+    <div class="pick">
+      <div class="tier">Compact</div>
+      <h3>Support pliable pour le nomade</h3>
+      <p>Léger, se range dans un sac. Idéal si vous alternez entre bureau à la maison et travail en déplacement.</p>
+      <a class="cta" href="https://www.amazon.fr/s?k=support+ordinateur+portable+pliable&tag=benjamin054c-21" target="_blank" rel="noopener sponsored">Voir les modèles →</a>
+    </div>
+    <div class="pick">
+      <div class="tier">Poste fixe</div>
+      <h3>Support fixe en aluminium, hauteur réglable</h3>
+      <p>Plus stable qu'un modèle pliable, avec un réglage précis de la hauteur pour aligner le haut de l'écran avec les yeux.</p>
+      <a class="cta" href="https://www.amazon.fr/s?k=support+ordinateur+portable+aluminium+reglable&tag=benjamin054c-21" target="_blank" rel="noopener sponsored">Voir les modèles →</a>
+    </div>
+    <div class="pick">
+      <div class="tier">Bras articulé</div>
+      <h3>Bras support avec plateau pour laptop</h3>
+      <p>Libère toute la surface du bureau et permet d'ajuster la distance en plus de la hauteur. Le plus confortable, aussi le plus encombrant à fixer.</p>
+      <a class="cta" href="https://www.amazon.fr/s?k=bras+support+ordinateur+portable&tag=benjamin054c-21" target="_blank" rel="noopener sponsored">Voir les modèles →</a>
+    </div>
+  </div>
+</section>
+
+<section class="article" id="poignets">
+  <div class="article-head">
+    <div class="kicker">Comparatif</div>
+    <h2>Repose-poignets et souris ergonomique, contre les tensions au clavier</h2>
+    <p>Les douleurs au poignet viennent souvent d'un angle du poignet trop cassé pendant la frappe, pas seulement du temps passé à taper. Ces deux accessoires corrigent l'angle sans changer d'habitudes.</p>
+  </div>
+  <div class="picks">
+    <div class="pick">
+      <div class="tier">Essentiel</div>
+      <h3>Repose-poignet en mousse à mémoire de forme</h3>
+      <p>Le premier achat à faible coût qui change vraiment quelque chose. À poser devant le clavier, pas sous les mains pendant la frappe.</p>
+      <a class="cta" href="https://www.amazon.fr/s?k=repose+poignet+clavier+memoire+de+forme&tag=benjamin054c-21" target="_blank" rel="noopener sponsored">Voir les modèles →</a>
+    </div>
+    <div class="pick">
+      <div class="tier">Souris</div>
+      <h3>Souris verticale ergonomique</h3>
+      <p>Change la position de l'avant-bras plutôt que celle du poignet. Demande quelques jours d'adaptation, souvent recommandée en cas de tension récurrente.</p>
+      <a class="cta" href="https://www.amazon.fr/s?k=souris+verticale+ergonomique&tag=benjamin054c-21" target="_blank" rel="noopener sponsored">Voir les modèles →</a>
+    </div>
+    <div class="pick">
+      <div class="tier">Clavier</div>
+      <h3>Clavier ergonomique fendu</h3>
+      <p>L'option la plus radicale, pour les cas de gêne installée depuis longtemps. Nécessite un vrai temps d'adaptation à la frappe.</p>
+      <a class="cta" href="https://www.amazon.fr/s?k=clavier+ergonomique+fendu&tag=benjamin054c-21" target="_blank" rel="noopener sponsored">Voir les modèles →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">Bureau Serein</div>
+  <p>Contenu indépendant. Bureau Serein participe au programme Partenaires Amazon EU : certains liens de ce site sont des liens d'affiliation, sans coût supplémentaire pour vous.</p>
+</footer>
+
+</body>
+</html>
